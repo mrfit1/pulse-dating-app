@@ -1,2 +1,3 @@
-# pulse-dating-app
-Pulse dating app (Expo React Native)
+# Pulse
+
+Expo React Native dating app.
