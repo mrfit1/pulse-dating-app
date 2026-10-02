@@ -1,0 +1,87 @@
+{
+  "expo": {
+    "name": "Pulse",
+    "slug": "dating-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "dating-app",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.iranianscream.datingapp",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Pulse uses your approximate location to show people near you anywhere in the world. Exact street coordinates are never shown on other profiles.",
+        "NSFaceIDUsageDescription": "Pulse uses Face ID so you can unlock the app privately.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0A0C",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "com.iranianscream.datingapp",
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ],
+      "softwareKeyboardLayoutMode": "resize",
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Pulse uses your photos so you can choose a profile picture.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": false,
+          "locationAlwaysPermission": false,
+          "locationWhenInUsePermission": "Pulse uses your approximate location to show people near you anywhere in the world. Exact street coordinates are never shown on other profiles.",
+          "isIosBackgroundLocationEnabled": false,
+          "isAndroidBackgroundLocationEnabled": false
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Pulse uses Face ID so you can unlock the app privately."
+        }
+      ],
+      "expo-system-ui"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "80a2540e-c736-41a2-8b9d-aa4355f0b0c9"
+      }
+    },
+    "owner": "themrfits-team",
+    "androidNavigationBar": {
+      "backgroundColor": "#0D0B12",
+      "barStyle": "light-content",
+      "enforceContrast": false
+    }
+  }
+}
